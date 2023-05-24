@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import ProductList from './components/Product/ProductList';
+import ProductDetail from './components/Product/ProductDetail';
+import Cart from './components/Cart/Cart';
+import CheckoutForm from './components/Checkout/CheckoutForm';
+import LoginForm from './components/User/LoginForm';
+import RegisterForm from './components/User/RegisterForm';
+import SearchBar from './components/Search/SearchBar';
+import Filter from './components/Search/Filter';
+import OrderHistory from './components/Order/OrderHistory';
+//import ProductForm from './components/Product/ProductForm';
+import ProductManagement from './components/Product/ProductManagement';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <h1>My Ecommerce Store</h1>
+        <LoginForm />
+        <RegisterForm />
       </header>
+      <main>
+        <SearchBar />
+        <Filter />
+        <ProductList />
+        <ProductDetail />
+        <Cart />
+        <CheckoutForm />
+        <OrderHistory />
+        <ProductManagement />
+      </main>
     </div>
   );
 }
